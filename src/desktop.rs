@@ -15,13 +15,13 @@ pub struct AndroidPermission<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> AndroidPermission<R> {
     pub fn check_permissions(&self) -> crate::Result<PermissionStatus> {
-        crate::Result::Err(crate::Error::from("Platform unsupported"))
+        Ok(PermissionStatus::default())
     }
 
     pub fn request_permissions(
         &self,
         _: Option<Vec<PermissionType>>,
     ) -> crate::Result<PermissionStatus> {
-        crate::Result::Err(crate::Error::from("Platform unsupported"))
+        Ok(PermissionStatus::default())
     }
 }
