@@ -4,6 +4,7 @@ use tauri::{
 };
 
 pub use models::*;
+pub mod models;
 
 #[cfg(desktop)]
 mod desktop;

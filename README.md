@@ -23,29 +23,15 @@ https://developer.android.com/reference/android/Manifest.permission
 
 ## Code Example
 ```
-pub fn check_read_audio_permission() -> bool {
-    let app_handle = GLOBAL_APP_HANDLE.get().unwrap();
+#[tauri::command]
+pub fn request_read_audio_permission(app_handle: AppHandle) -> bool {
+    // Check if permission is granted
     if app_handle
         .android_permission()
         .check_permissions()
-        .expect("Failed to request read audio permission")
-        .audio
-        != PermissionState::Granted
-    {
-        return app_handle
-            .android_permission()
-            .request_permissions(Some(vec![PermissionType::ReadMediaAudio]))
-            .unwrap()
-            .audio
-            == PermissionState::Granted;
-    }
-    true
-}
-
-#[tauri::command]
-pub fn request_read_audio_permission() -> bool {
-    let app_handle = GLOBAL_APP_HANDLE.get().unwrap();
-    if check_read_audio_permission() {
+        .expect("Failed to check read audio permission")
+        .read_media_audio != PermissionType::Granted {
+        // Request permission and return the result
         return app_handle
             .android_permission()
             .request_permissions(Some(vec![PermissionType::ReadMediaAudio]))
