@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "org.plugin.android-permission"
+    namespace = "org.plugin.androidpermission"
     compileSdk = 34
 
     defaultConfig {

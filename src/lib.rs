@@ -34,7 +34,7 @@ impl<R: Runtime, T: Manager<R>> crate::AndroidPermissionExt<R> for T {
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
-  Builder::new("android-permission")
+  Builder::new("androidpermission")
     .invoke_handler(tauri::generate_handler![commands::request_permissions, commands::check_permissions])
     .setup(|app, api| {
       #[cfg(mobile)]

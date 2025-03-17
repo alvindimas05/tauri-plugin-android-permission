@@ -1,4 +1,4 @@
-package org.plugin.android-permission
+package org.plugin.androidpermission
 
 import org.junit.Test
 

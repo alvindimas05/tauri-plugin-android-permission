@@ -1,3 +1,3 @@
-package org.plugin.android-permission
+package org.plugin.androidpermission
 
 class AndroidPermission {}
