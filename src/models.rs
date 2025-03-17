@@ -11,7 +11,9 @@ pub struct PermissionStatus {
 #[derive(Debug, Clone, Serialize, Deserialize, Type)]
 #[serde(rename_all = "camelCase")]
 pub enum PermissionType {
-    Audio,
-    Images,
-    Video,
+    ReadMediaAudio,
+    ReadMediaImages,
+    ReadMediaVideo,
+    ReadExternalStorage,
+    WriteExternalStorage,
 }

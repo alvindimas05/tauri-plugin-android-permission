@@ -6,9 +6,9 @@ import app.tauri.annotation.InvokeArg
 import app.tauri.annotation.TauriPlugin
 import app.tauri.plugin.Plugin
 
-private const val ALIAS_READ_AUDIO: String = "readAudio"
-private const val ALIAS_READ_IMAGES: String = "readImages"
-private const val ALIAS_READ_VIDEO: String = "readVideo"
+private const val ALIAS_READ_AUDIO: String = "readMediaAudio"
+private const val ALIAS_READ_IMAGES: String = "readMediaImages"
+private const val ALIAS_READ_VIDEO: String = "readMediaVideo"
 private const val ALIAS_READ_EXTERNAL_STORAGE: String = "readExternalStorage"
 private const val ALIAS_WRITE_EXTERNAL_STORAGE: String = "writeExternalStorage"
 @TauriPlugin(
