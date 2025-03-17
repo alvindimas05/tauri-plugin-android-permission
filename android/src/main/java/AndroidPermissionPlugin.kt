@@ -5,6 +5,8 @@ import app.tauri.annotation.Command
 import app.tauri.annotation.InvokeArg
 import app.tauri.annotation.TauriPlugin
 import app.tauri.plugin.Plugin
+import app.tauri.annotation.Permission
+import android.Manifest 
 
 private const val ALIAS_READ_AUDIO: String = "readMediaAudio"
 private const val ALIAS_READ_IMAGES: String = "readMediaImages"
