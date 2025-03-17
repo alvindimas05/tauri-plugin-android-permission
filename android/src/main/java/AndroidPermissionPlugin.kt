@@ -13,6 +13,7 @@ private const val ALIAS_READ_IMAGES: String = "readMediaImages"
 private const val ALIAS_READ_VIDEO: String = "readMediaVideo"
 private const val ALIAS_READ_EXTERNAL_STORAGE: String = "readExternalStorage"
 private const val ALIAS_WRITE_EXTERNAL_STORAGE: String = "writeExternalStorage"
+
 @TauriPlugin(
     permissions = [
         Permission(strings = [
@@ -42,8 +43,6 @@ private const val ALIAS_WRITE_EXTERNAL_STORAGE: String = "writeExternalStorage"
         )
     ]
 )
-
-@TauriPlugin
 class AndroidPermissionPlugin(private val activity: Activity): Plugin(activity) {
     private val implementation = AndroidPermission()
 }
